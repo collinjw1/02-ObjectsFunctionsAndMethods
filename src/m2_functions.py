@@ -3,12 +3,12 @@ Practice DEFINING and CALLING
      FUNCTIONS
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Jonathan Collins.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 #
-# TODO: 2.
+# Done: 2.
 #   Allow this module to use the  rosegraphics.py  module by marking the
 #     src
 #   folder in this project as a "Sources Root", as follows:
@@ -30,11 +30,12 @@ def main():
     """
     # A TurtleWindow works "behind the scenes" to enable Turtle movement
     window = rg.TurtleWindow()
-
     turtle1()
+    turtle4()
     turtle3()
     turtle2()
     turtle2()
+    turtle5()
 
     window.close_on_mouse_click()
 
@@ -104,9 +105,47 @@ def turtle3():
     maja.end_fill()
 
 
+
+def turtle4():
+    """
+    Constructs a default SimpleTurtle.
+    Makes that SimpleTurtle move
+    and then draw a circle.
+    """
+    toto = rg.SimpleTurtle()
+    toto.pen = rg.Pen('blue',10)
+    toto.speed = 10
+    toto.forward(40)
+    toto.left(120)
+    toto.forward(100)
+    toto.left(60)
+    toto.forward(300)
+    toto.draw_circle(50)
+
+
+def turtle5():
+    """
+    Constructs two default SimpleTurtles.
+    Makes those SimpleTurtles move
+    and then draw circles.
+    """
+    joey = rg.SimpleTurtle()
+    joey.pen = rg.Pen('green',5)
+    joey.speed = 13
+    jason = rg.SimpleTurtle()
+    jason.pen = rg.Pen('blue',5)
+    jason.speed = 20
+
+    joey.left(45)
+    jason.left(135)
+    joey.forward(150)
+    joey.draw_circle(75)
+    jason.forward(150)
+    jason.draw_circle(75)
+
 ###############################################################################
 #
-# TODO: 3.
+# Done: 3.
 #   READ the code above.  Be sure you understand:
 #     -- How many functions are defined above?
 #           (Answer: 4)
@@ -138,7 +177,7 @@ def turtle3():
 
 ###############################################################################
 #
-# TODO: 4.
+# Done: 4.
 #   Define another function,
 #   immediately below the end of the definition of   turtle3   above.
 #   Name your new function   turtle4.
@@ -168,7 +207,7 @@ def turtle3():
 
 ###############################################################################
 #
-# TODO: 5.
+# Done: 5.
 #   Add a line to   main   that CALLS your new function immediately
 #   AFTER  main  calls turtle1.  So:
 #     -- the SimpleTurtle from turtle1 should move,
@@ -184,7 +223,7 @@ def turtle3():
 
 ###############################################################################
 #
-# TODO: 6.
+# Done: 6.
 #   The previous two TODOs IMPLEMENTED a function (TO-DO 4)
 #   and TESTED that function (TO-DO 5).
 #
@@ -211,7 +250,7 @@ def turtle3():
 
 ###############################################################################
 #
-# TODO: 7.
+# Done: 7.
 #   COMMIT-and-PUSH your work (after changing this TO-DO to DONE).
 #
 #   As a reminder, here is how you should do so:
