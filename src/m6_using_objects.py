@@ -14,8 +14,9 @@ import rosegraphics as rg
 def main():
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
-    
-
+    two_circles()
+    circle_and_rectangle()
+    lines()
 
 def two_circles():
     """
@@ -27,12 +28,15 @@ def two_circles():
            -- One is filled with some color and one is not filled.
     -- Waits for the user to press the mouse, then closes the window.
     """
-    window = rg.RoseWindow
-    p1 = rg.Point(200,100)
-    p2 = rg.Point(300,250)
+    window = rg.RoseWindow()
+    p1 = rg.Point(100,100)
+    p2 = rg.Point(200,150)
     circle1 = rg.Circle(p1,25)
     circle2 = rg.Circle(p2,75)
-    circle2.fill_color('blue')
+    circle2.fill_color = 'blue'
+    circle1.attach_to(window)
+    circle2.attach_to(window)
+    window.render()
     window.close_on_mouse_click()
 
 
@@ -76,8 +80,28 @@ def circle_and_rectangle():
            75.0
            150.0
     """
+    window = rg.RoseWindow()
+    p1 = rg.Point(100, 100)
+    p2 = rg.Point(250, 150)
+    circle1 = rg.Circle(p1, 25)
+    circle1.fill_color = 'blue'
+    square1 = rg.Square(p2,35)
+    circle1.attach_to(window)
+    square1.attach_to(window)
+    window.render()
+    window.close_on_mouse_click()
+    print(circle1.outline_thickness)
+    print(circle1.fill_color)
+    print(p1)
+    print(p1.x)
+    print(p1.y)
+    print(square1.outline_thickness)
+    print(square1.fill_color)
+    print(p2)
+    print(p2.x)
+    print(p2.y)
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement this function, per its doc-string above.
+    # Done: 3. Implement this function, per its doc-string above.
     #   -- ANY objects that meet the criteria are fine.
     # Put a statement in   main   to test this function
     #    (by calling this function).
@@ -109,8 +133,23 @@ def lines():
 
     -- Waits for the user to press the mouse, then closes the window.
     """
+    window = rg.RoseWindow()
+    p11 = rg.Point(100,150)
+    p12 = rg.Point(200,230)
+    line1 = rg.Line(p11,p12)
+    p21 = rg.Point(250,20)
+    p22 = rg.Point(280,230)
+    line2 = rg.Line(p21,p22)
+    line1.attach_to(window)
+    line2.attach_to(window)
+    line2.thickness = 3
+    window.render()
+    window.close_on_mouse_click()
+    print(line2.get_midpoint())
+    print(line2.get_midpoint().x)
+    print(line2.get_midpoint().y)
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # Done: 4. Implement and test this function.
     # -------------------------------------------------------------------------
 
 
